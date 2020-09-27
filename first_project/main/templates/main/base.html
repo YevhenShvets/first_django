@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Базова сторінка{% endblock %}</title>
+</head>
+<body style="margin:0; padding:0;">
+<style>
+    .content{
+        margin-left:40px;
+    }
+</style>
+    <center style="padding-bottom:10px; background-color:orange;">
+        <h4 style="float:left; margin-left:10px;">TestName</h4>
+        <a href="{% url 'home' %}">Головна сторінка</a>
+        <br>
+        <a href="{% url 'create' %}">Створити задачу</a>
+        <br>
+        <a href="{% url 'about' %}">Про розробника</a>
+        <hr width="30%">
+    </center>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

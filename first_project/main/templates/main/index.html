@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}Головна сторінка{% endblock %}
+
+{% block content %}
+<h1>It is main page</h1>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div style="display:block; background-color:rgba(20,30,50,0.5); padding:10px; width:50%; margin-bottom:10px">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.text }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Задачі ще не створено</p>
+    {% endif %}
+{% endblock %}
